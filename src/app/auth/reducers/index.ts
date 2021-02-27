@@ -23,13 +23,13 @@ export const metaReducers: MetaReducer<AuthState>[] = !environment.production ? 
 export const authReducer = createReducer(
   initialAuthState,
   on(AuthActions.login, (state, action) => {
-    return{
+    return {
       user: action.user
-    }
+    };
   }),
   on(AuthActions.logout, (state, action) => {
-    return{
+    return {
       user: undefined
-    }
+    };
   })
 );
