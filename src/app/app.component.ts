@@ -50,14 +50,14 @@ export class AppComponent implements OnInit {
 
     this.isLoggedOut$ = this.store
       .pipe(
-        map(isLoggedOut)
+        select(isLoggedOut)
       );
 
 
   }
 
   logout() {
-      this.store.dispatch(logout())
+    this.store.dispatch(logout());
   }
 
 }
